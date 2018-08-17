@@ -1,0 +1,238 @@
+# baseURI: urn:x-evn-master:templateontology
+# imports: http://datashapes.org/dash
+# imports: http://spinrdf.org/spl
+# imports: urn:x-evn-master:test11
+
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://taxonic.kennisnet.com/ontologies/viewer#AbstractSWPComponent>
+  rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewer#AbstractSWPComponent-heeftSWPComponent> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewer#AbstractSWPComponent-heeftSWPComponent-0> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewer#AbstractSWPComponent-heeftSWPComponent-1> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewer#AbstractSWPComponent-heeftSWPComponent>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewer#heeftSWPComponent> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewer#AbstractSWPComponent-heeftSWPComponent-0>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewer#heeftSWPComponent> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewer#AbstractSWPComponent-heeftSWPComponent-1>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewer#heeftSWPComponent> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout>
+  rdf:type owl:Class ;
+  rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+  rdfs:label "AbstractHTML_Layout" ;
+  rdfs:subClassOf owl:Thing ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout-heeftPlek> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout-heeftPlek-0> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout-heeftPlek-1> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout-heeftPlek-2> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout-heeftPlek-3> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout-heeftPlek>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout-heeftPlek-0>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout-heeftPlek-1>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout-heeftPlek-2>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout-heeftPlek-3>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractPlek>
+  rdf:type owl:Class ;
+  rdfs:label "AbstractPlek" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractSWPComponent> ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractSWPComponents> ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractSWPComponents>
+  rdf:type owl:Class ;
+  rdfs:label "AbstractSWPComponent" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractTemplate>
+  rdf:type owl:Class ;
+  rdfs:label "AbstractTemplate" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractSWPComponent> ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractSWPComponents> ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Body>
+  rdf:type owl:Class ;
+  rdfs:label "Body" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Footer>
+  rdf:type owl:Class ;
+  rdfs:label "Footer" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Header>
+  rdf:type owl:Class ;
+  rdfs:label "Header" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek>
+  rdf:type owl:Class ;
+  rdfs:label "Plek" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractPlek> ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek1>
+  rdf:type owl:Class ;
+  rdfs:label "Plek1" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek2>
+  rdf:type owl:Class ;
+  rdfs:label "Plek2" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek4>
+  rdf:type owl:Class ;
+  rdfs:label "Plek4" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek5>
+  rdf:type owl:Class ;
+  rdfs:label "Plek5" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek6>
+  rdf:type owl:Class ;
+  rdfs:label "Plek6" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek7>
+  rdf:type owl:Class ;
+  rdfs:label "Plek7" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Template>
+  rdf:type owl:Class ;
+  rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+  rdfs:label "Template" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractTemplate> ;
+  rdfs:subClassOf owl:Thing ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template-heeftBody> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template-heeftFooter> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template-heeftHeader> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Template-heeftBody>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody> ;
+  <http://topbraid.org/tosh#editWidget> <http://topbraid.org/swa#NestedObjectEditor> ;
+  <http://topbraid.org/tosh#viewWidget> <http://topbraid.org/swa#NestedObjectViewer> ;
+  <http://www.w3.org/ns/shacl#class> <http://taxonic.kennisnet.com/ontologies/viewertemplate#Body> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Template-heeftFooter>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftFooter> ;
+  <http://topbraid.org/tosh#editWidget> <http://topbraid.org/swa#NestedObjectEditor> ;
+  <http://topbraid.org/tosh#viewWidget> <http://topbraid.org/swa#NestedObjectViewer> ;
+  <http://www.w3.org/ns/shacl#class> <http://taxonic.kennisnet.com/ontologies/viewertemplate#Footer> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Template-heeftHeader>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader> ;
+  <http://topbraid.org/tosh#editWidget> <http://topbraid.org/swa#NestedObjectEditor> ;
+  <http://topbraid.org/tosh#viewWidget> <http://topbraid.org/swa#NestedObjectViewer> ;
+  <http://www.w3.org/ns/shacl#class> <http://taxonic.kennisnet.com/ontologies/viewertemplate#Header> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Template1>
+  rdf:type owl:Class ;
+  rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+  rdfs:label "Template1" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#Template_2>
+  rdf:type owl:Class ;
+  rdfs:label "Template2" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#gebruiktTemplate>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewertemplate#Pagina> ;
+  rdfs:label "gebruiktTemplate" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template> ;
+  rdfs:label "heeftBody" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewertemplate#Body> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftFooter>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template> ;
+  rdfs:label "heeftFooter" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewertemplate#Footer> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template> ;
+  rdfs:label "heeftHeader" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewertemplate#Header> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractHTML_Layout> ;
+  rdfs:label "heeftPlek" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractPlek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractSWPComponents> ;
+  rdfs:label "heeftSWPComponent" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftTemplate>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewer#Pagina> ;
+  rdfs:label "heeftTemplate" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#home>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#HoofdPagina> ;
+  rdfs:label "home" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#plek3>
+  rdf:type owl:Class ;
+  rdfs:label "plek3" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#viewer1>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Viewer> ;
+  rdfs:label "viewer1" ;
+.
+<urn:x-evn-master:templateontology>
+  rdf:type owl:Ontology ;
+  metadata:status metadata:UnderDevelopmentStatus ;
+  <http://topbraid.org/swa#defaultNamespace> "http://taxonic.kennisnet.com/ontologies/viewertemplate#" ;
+  rdfs:comment """For creating Templates in each page. 
+""" ;
+  rdfs:label "ViewerTemplate Ontology" ;
+  rdfs:label "templateOntology" ;
+  rdfs:label "templateontology" ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://spinrdf.org/spl> ;
+  owl:imports <urn:x-evn-master:test11> ;
+.

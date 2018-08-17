@@ -1,0 +1,1454 @@
+# baseURI: http://topbraid.org/swa/knviewer
+# imports: http://topbraid.org/examples/schemakennedys
+# imports: http://topbraid.org/swa
+# imports: http://uispin.org/html
+# imports: http://uispin.org/swon
+# prefix: kn-viewer
+
+@prefix : <http://topbraid.org/swa/knviewer#> .
+@prefix adminguide: <http://server.topbraidlive.org/doc/adminguide#> .
+@prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix arg: <http://spinrdf.org/arg#> .
+@prefix cfg: <http://server.topbraidlive.org/web/2009/config#> .
+@prefix charts: <http://uispin.org/charts#> .
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix css: <http://uispin.org/css#> .
+@prefix daml: <http://www.daml.org/2001/03/daml+oil#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix default: <http://uispin.org/default#> .
+@prefix email: <http://topbraid.org/email#> .
+@prefix esol: <http://purl.edustandaard.nl/model/ordered_lists/> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix html: <http://uispin.org/html#> .
+@prefix imported: <http://topbraid.org/imported#> .
+@prefix json: <http://topbraid.org/json#> .
+@prefix kennedys: <http://topbraid.org/examples/kennedys#> .
+@prefix kn-viewer: <http://topbraid.org/swa/knviewer#> .
+@prefix let: <http://uispin.org/let#> .
+@prefix letrs: <http://uispin.org/letrs#> .
+@prefix list: <http://jena.hpl.hp.com/ARQ/list#> .
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix raci: <http://topbraid.org/raci#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemax: <http://topbraid.org/schemax/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix search: <http://topbraid.org/search#> .
+@prefix search.spin: <http://topbraid.org/search.spin#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosapp: <http://evn.topbraidlive.org/uiplugins#> .
+@prefix skostemplate: <http://topbraid.org/spin/skostemplates#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix sm: <http://topbraid.org/sparqlmotion#> .
+@prefix smf: <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix sml: <http://topbraid.org/sparqlmotionlib#> .
+@prefix solr: <http://topbraid.org/solr#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix sparqlmotionlib-swp: <http://topbraid.org/sparqlmotionlib-swp#> .
+@prefix sparqlmotionlib-tbc: <http://topbraid.org/sparqlmotionlib-tbc#> .
+@prefix spell: <http://topbraid.org/spellcheckresults#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix spl-dynamic-ranges: <http://spinrdf.org/spl-dynamic-ranges#> .
+@prefix spr: <http://spinrdf.org/spr#> .
+@prefix spra: <http://spinrdf.org/spra#> .
+@prefix style: <http://uispin.org/style#> .
+@prefix svg: <http://uispin.org/svg#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix swaclasses: <http://topbraid.org/swaclasses#> .
+@prefix swaeditor: <http://topbraid.org/swaeditor#> .
+@prefix swaowl: <http://topbraid.org/swaowl#> .
+@prefix swashacl: <http://topbraid.org/swashacl#> .
+@prefix swauml: <http://topbraid.org/swauml#> .
+@prefix swon: <http://uispin.org/swon#> .
+@prefix sxml: <http://topbraid.org/sxml#> .
+@prefix tables: <http://topbraid.org/tables#> .
+@prefix task: <http://topbraid.org/task#> .
+@prefix tasks: <http://topbraid.org/tasks#> .
+@prefix tbl: <http://topbraidlive.org/functions#> .
+@prefix tops: <http://www.topbraid.org/tops#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix ui: <http://uispin.org/ui#> .
+@prefix uix: <http://topbraidlive.org/uix#> .
+@prefix unnamed: <http://taxonic.com/unnamed#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix xlink: <http://www.w3.org/1999/xlink#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://topbraid.org/swa/knviewer>
+  rdf:type owl:Ontology ;
+  owl:imports <http://topbraid.org/examples/schemakennedys> ;
+  owl:imports <http://topbraid.org/swa> ;
+  owl:imports <http://uispin.org/html> ;
+  owl:imports <http://uispin.org/swon> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+kn-viewer:DropdownMenu
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:data ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:indexableItem ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:result ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<li>{= ui:label(?data) }<ul>
+        <ui:forEach ui:resultSet=\"{#
+                SELECT ?nextdata_child ?index ?nextChildIndexableItem ?childIndexableItem ?childIndex ?nextChildIndex ?behavior
+                WHERE {
+                    ?result &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#HeeftRootIndex&gt; ?index .
+                    ?childIndex esol:hasParent ?index .
+                    ?childIndexableItem esol:hasIndex ?childIndex .
+                    ?childIndex esol:hasNext ?nextChildIndex .
+                    ?nextChildIndexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?nextdata_child .
+                    ?nextChildIndexableItem esol:hasIndex ?nextChildIndex .
+                } }\">
+            <ui:dynamicView arg:indexableItem=\"{= ?childIndexableItem }\" ui:class=\"{= kn-viewer:DropdownMenu_item }\"/>
+            <ui:dynamicView arg:current_data=\"{= ?nextdata_child }\" arg:current_indexableItem=\"{= ?nextChildIndexableItem }\" ui:class=\"{= kn-viewer:GetNextDropdownItem }\"/>
+        </ui:forEach>
+    </ul>
+</li>
+"""^^ui:Literal ;
+  rdfs:label "Menu component" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+.
+kn-viewer:DropdownMenu_item
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:indexableItem ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:forEach ui:resultSet=\"{#
+        SELECT ?data ?result ?behavior
+        WHERE {
+            ?indexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?data .
+            ?indexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior&gt; ?behavior .
+            ?behavior &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult&gt; ?result .
+        } }\">
+    <ui:if ui:condition=\"{= kn-viewer:isClickableItem(?behavior) }\">
+        <li>
+            <ui:createLink arg:graph=\"{= ui:globalVarValue(?globalGraph) }\" arg:pagina=\"{= ?result }\" ui:viewClass=\"{= kn-viewer:Pagina }\">
+                <a href=\"{= ?link }\" rel=\"section\">{= ui:label(?data) }</a>
+            </ui:createLink>
+        </li>
+    </ui:if>
+    <!-- the else if condition is for when the css supports nested dropdown menu
+<ui:elseif ui:condition=\"{= kn-viewer:isHoverableItem(?behavior) }\">
+<ui:dynamicView arg:data=\"{= ?data }\"
+arg:indexableItem=\"{= ?indexableItem }\"
+arg:result=\"{= ?result }\"
+ui:class=\"kn-viewer:DropdownMenu\"/>
+</ui:elseif>
+-->
+</ui:forEach>
+"""^^ui:Literal ;
+  rdfs:label "Menu item component" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+.
+kn-viewer:Footer
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:object ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?data ?dataN ?nextChildIndexableItem ?childIndexableItem ?childIndex ?nextChildIndex ?behavior
+            WHERE {
+                ?object esol:hasIndex ?index .
+                ?childIndex esol:hasParent ?index .
+                ?childIndexableItem esol:hasIndex ?childIndex .
+                ?childIndex esol:hasNext ?nextChildIndex .
+                ?nextChildIndexableItem esol:hasIndex ?nextChildIndex .
+                ?nextChildIndexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?dataN .
+            } }\">
+        <ul>
+            <ui:dynamicView arg:indexableItem=\"{= ?childIndexableItem }\" ui:class=\"{= kn-viewer:Item }\"/>
+            <ui:dynamicView arg:current_data=\"{= ?dataN }\" arg:current_indexableItem=\"{= ?nextChildIndexableItem }\" ui:class=\"{= kn-viewer:GetNextItem_Generic }\"/>
+        </ul>
+    </ui:forEach>
+</ui:group>
+"""^^ui:Literal ;
+  rdfs:label "Footer" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+  skos:prefLabel "Footer" ;
+.
+kn-viewer:FriendlyUrlReceiver
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:incomingRequest ;
+      spl:valueType xsd:string ;
+    ] ;
+  ui:prototype """
+<div>
+    <div>incoming request: {= ?incomingRequest }</div>
+    <div>concept id: {= STRAFTER(STRAFTER(?incomingRequest, \"/concept/\"), \"/\") }</div>
+</div>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  rdfs:label "Friendly url receiver" ;
+  rdfs:subClassOf ui:Element ;
+.
+kn-viewer:GenericViewerComponents
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Generic Viewer swp Components" ;
+  rdfs:subClassOf swa:Elements ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+kn-viewer:GetNextDropdownItem
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:current_data ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:current_indexableItem ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:forEach ui:resultSet=\"{#
+        SELECT ?nextIndex ?next_data ?next_index ?next_indexableItem
+        WHERE {
+            ?current_indexableItem esol:hasIndex ?current_index .
+            ?current_index esol:hasNext ?next_index .
+            ?next_indexableItem esol:hasIndex ?next_index .
+            ?next_indexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?next_data .
+        } }\">
+    <ui:dynamicView arg:indexableItem=\"{= ?current_indexableItem }\" ui:class=\"{= kn-viewer:DropdownMenu_item }\"/>
+    <ui:if ui:condition=\"{= kn-viewer:hasNext(?next_index) }\">
+        <!-- TODO: call getNextItem again with next_indexablteItem and next_data as its arguments-->
+        <!-- <kn-viewer:GetNextItem arg:current_data=\"{= ?next_data}\" arg:current_indexableItem=\"{=?next_indexableItem}\"/> -->
+        <ui:dynamicView arg:current_data=\"{= ?next_data }\" arg:current_indexableItem=\"{= ?next_indexableItem }\" ui:class=\"{= kn-viewer:GetNextDropdownItem }\"/>
+    </ui:if>
+    <ui:else>
+        <ui:dynamicView arg:indexableItem=\"{= ?next_indexableItem }\" ui:class=\"{= kn-viewer:DropdownMenu_item }\"/>
+    </ui:else>
+</ui:forEach>
+"""^^ui:Literal ;
+  rdfs:label "GetNextItem" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+  skos:prefLabel "GetNextItem" ;
+.
+kn-viewer:GetNextIndex_Property
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:current_index ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:subject ;
+      spl:valueType rdfs:Class ;
+    ] ;
+  ui:prototype """
+<ui:forEach ui:resultSet=\"{#
+        SELECT ?next_index
+        WHERE {
+            ?current_index &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#indexForIndexableProperty&gt; ?indexableProperty .
+            ?current_index esol:hasNext ?next_index .
+        } }\">
+    <ui:dynamicView arg:current_index=\"{= ?current_index }\" arg:subject=\"{= ?subject }\" ui:class=\"{= kn-viewer:PropertyOutput }\"/>
+    <ui:if ui:condition=\"{= kn-viewer:hasNext(?next_index) }\">
+        <!--TODO: change to <kn-viewer:GetNextItem arg:current_data=\"{= ?next_data}\" arg:current_indexableItem=\"{=?next_indexableItem}\"/> -->
+        <ui:dynamicView arg:current_index=\"{= ?next_index }\" arg:subject=\"{= ?subject }\" ui:class=\"{= kn-viewer:GetNextIndex_Property }\"/>
+    </ui:if>
+    <ui:else>
+        <ui:dynamicView arg:current_index=\"{= ?next_index }\" arg:subject=\"{= ?subject }\" ui:class=\"{= kn-viewer:PropertyOutput }\"/>
+    </ui:else>
+</ui:forEach>
+"""^^ui:Literal ;
+  rdfs:label "GetNextIndex" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+  skos:prefLabel "GetNextIndex" ;
+.
+kn-viewer:GetNextItem
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:current_data ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:current_indexableItem ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:forEach ui:resultSet=\"{#
+        SELECT ?nextIndex ?next_data ?next_index ?next_indexableItem
+        WHERE {
+            ?current_indexableItem esol:hasIndex ?current_index .
+            ?current_index esol:hasNext ?next_index .
+            ?next_indexableItem esol:hasIndex ?next_index .
+            ?next_indexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?next_data .
+        } }\">
+    <ui:dynamicView arg:indexableItem=\"{= ?current_indexableItem }\" ui:class=\"{= kn-viewer:Menu_item }\"/>
+    <ui:if ui:condition=\"{= kn-viewer:hasNext(?next_index) }\">
+        <!--TODO: change to <kn-viewer:GetNextItem arg:current_data=\"{= ?next_data}\" arg:current_indexableItem=\"{=?next_indexableItem}\"/> -->
+        <ui:dynamicView arg:current_data=\"{= ?next_data }\" arg:current_indexableItem=\"{= ?next_indexableItem }\" ui:class=\"{= kn-viewer:GetNextItem }\"/>
+    </ui:if>
+    <ui:else>
+        <ui:dynamicView arg:indexableItem=\"{= ?next_indexableItem }\" ui:class=\"{= kn-viewer:Menu_item }\"/>
+    </ui:else>
+</ui:forEach>
+"""^^ui:Literal ;
+  rdfs:label "GetNextItem" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+  skos:prefLabel "GetNextItem" ;
+.
+kn-viewer:GetNextItem_Generic
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:current_data ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:current_indexableItem ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:forEach ui:resultSet=\"{#
+        SELECT ?nextIndex ?next_data ?next_index ?next_indexableItem
+        WHERE {
+            ?current_indexableItem esol:hasIndex ?current_index .
+            ?current_index esol:hasNext ?next_index .
+            ?next_indexableItem esol:hasIndex ?next_index .
+            ?next_indexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?next_data .
+        } }\">
+    <ui:dynamicView arg:indexableItem=\"{= ?current_indexableItem }\" ui:class=\"{= kn-viewer:Item }\"/>
+    <ui:if ui:condition=\"{= kn-viewer:hasNext(?next_index) }\">
+        <!--TODO: change to <kn-viewer:GetNextItem arg:current_data=\"{= ?next_data}\" arg:current_indexableItem=\"{=?next_indexableItem}\"/> -->
+        <ui:dynamicView arg:current_data=\"{= ?next_data }\" arg:current_indexableItem=\"{= ?next_indexableItem }\" ui:class=\"{= kn-viewer:GetNextItem_Generic }\"/>
+    </ui:if>
+    <ui:else>
+        <ui:dynamicView arg:indexableItem=\"{= ?next_indexableItem }\" ui:class=\"{= kn-viewer:Item }\"/>
+    </ui:else>
+</ui:forEach>
+"""^^ui:Literal ;
+  rdfs:label "GetNextItem" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+  skos:prefLabel "GetNextItem" ;
+.
+kn-viewer:GetTitel
+  rdf:type spin:SelectTemplate ;
+  spin:body [
+      rdf:type sp:Select ;
+      sp:distinct "true"^^xsd:boolean ;
+      sp:resultVariables (
+          [
+            sp:varName "result" ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "result" ;
+              ] ;
+            sp:predicate <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftPart> ;
+            sp:subject [
+                sp:varName "block" ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "type2" ;
+              ] ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "result" ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Filter ;
+            sp:expression [
+                rdf:type sp:eq ;
+                sp:arg1 [
+                    sp:varName "type2" ;
+                  ] ;
+                sp:arg2 <http://taxonic.kennisnet.com/ontologies/viewerpart#SidebarTitel> ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:block ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  rdfs:label "SelectIndexableItem" ;
+  rdfs:subClassOf spin:SelectTemplates ;
+  skos:prefLabel "SelectIndexableItem" ;
+.
+kn-viewer:IndexableProperty
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:current_index ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:subject ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?indexableProperty ?next_index
+            WHERE {
+                ?current_index esol:hasNext ?next_index .
+                ?next_index &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#indexForIndexableProperty&gt; ?next_indexableProperty .
+            } }\">
+        <ui:dynamicView arg:current_index=\"{= ?current_index }\" arg:subject=\"{= ?subject }\" ui:class=\"{= kn-viewer:PropertyOutput }\"/>
+        <ui:dynamicView arg:current_index=\"{= ?next_index }\" arg:subject=\"{= ?subject }\" ui:class=\"{= kn-viewer:GetNextIndex_Property }\"/>
+    </ui:forEach>
+</ui:group>
+"""^^ui:Literal ;
+  rdfs:label "IndexableProperty" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+.
+kn-viewer:InlineLink
+  rdf:type spin:Function ;
+  spin:body [
+      rdf:type sp:Ask ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "type" ;
+              ] ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_arg1 ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate sp:arg1 ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:returnType xsd:boolean ;
+  rdfs:label "hasChild" ;
+  rdfs:subClassOf spl:BooleanFunctions ;
+  skos:prefLabel "hasChild" ;
+.
+kn-viewer:InlineLinkService
+  rdf:type ui:Service ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:originalUrl ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<swon:Object>
+    <ui:setContext ui:queryGraph=\"{= ui:graphWithImports(&lt;urn:x-evn-master:globalgraph&gt;) }\">
+        <ui:forEach ui:resultSet=\"{#
+                SELECT ?graphUri
+                WHERE {
+                    ?viewer a &lt;http://taxonic.kennisnet.com/ontologies/globalGraph#Viewer&gt; .
+                    ?viewer &lt;http://taxonic.kennisnet.com/ontologies/globalGraph#heeftGraphURI&gt; ?graphUri .
+                } }\">
+            <ui:setContext ui:queryGraph=\"{= ui:graphWithImports(IRI(?graphUri)) }\">
+                <ui:if ui:condition=\"{= kn-viewer:InlineLink(?originalUrl) }\">
+                    <ui:if ui:condition=\"{= kn-viewer:InlineLink(?originalUrl) }\">
+                        <ui:createLink arg:graph=\"{= IRI(?graphUri) }\" arg:pagina=\"{= IRI(&lt;http://taxonic.kennisnet.com/ontologies/viewerasset#Begrippen-Pagina&gt;) }\" arg:subject=\"{= IRI(?originalUrl) }\" ui:viewClass=\"{= kn-viewer:Pagina }\">
+                            <swon:Value arg:name=\"targetUrl\" arg:value=\"{= ?link }\"/>
+                        </ui:createLink>
+                    </ui:if>
+                </ui:if>
+                <ui:else>
+                    <swon:Value arg:name=\"targetUrl\" arg:value=\"{= ?originalUrl }\"/>
+                </ui:else>
+            </ui:setContext>
+        </ui:forEach>
+    </ui:setContext>
+</swon:Object>
+"""^^ui:Literal ;
+  ui:responseType ui:JSON ;
+  rdfs:label "InlineLinkService" ;
+  rdfs:subClassOf ui:JSONServices ;
+  skos:prefLabel "InlineLinkService" ;
+.
+kn-viewer:Item
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:indexableItem ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?data ?result ?behavior ?comment ?externalUrl ?resultType
+            WHERE {
+                ?indexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?data .
+                OPTIONAL {
+                    ?indexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior&gt; ?behavior .
+                    ?behavior &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult&gt; ?result .
+                    ?result a ?resultType .
+                    OPTIONAL {
+                        ?result &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftUrl&gt; ?externalUrl .
+                    } .
+                } .
+            } }\">
+        <ui:if ui:condition=\"{= bound(?behavior) }\">
+            <ui:if ui:condition=\"{= kn-viewer:isClickableItem(?behavior) }\">
+                <ui:if ui:condition=\"{= kn-viewer:isPaginaType(?resultType) }\">
+                    <li>
+                        <ui:createLink arg:graph=\"{= ui:globalVarValue(?globalGraph) }\" arg:pagina=\"{= ?result }\" ui:viewClass=\"{= kn-viewer:Pagina }\">
+                            <a href=\"{= ?link }\">{= ui:label(?data) }</a>
+                        </ui:createLink>
+                    </li>
+                </ui:if>
+                <ui:else>
+                    <li>
+                        <a href=\"{= ?externalUrl }\" rel=\"section\">{= ui:label(?data) }</a>
+                    </li>
+                </ui:else>
+            </ui:if>
+            <ui:else>
+                <li>{= ui:label(?data) }</li>
+            </ui:else>
+        </ui:if>
+        <ui:else>
+            <li>{= ui:label(?data) }</li>
+        </ui:else>
+    </ui:forEach>
+</ui:group>
+"""^^ui:Literal ;
+  rdfs:label "Menu item component" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+.
+kn-viewer:Menu
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:object ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ul>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?data ?dataN ?nextChildIndexableItem ?childIndexableItem ?childIndex ?nextChildIndex ?behavior
+            WHERE {
+                ?object &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#HeeftRootIndex&gt; ?index .
+                ?childIndex esol:hasParent ?index .
+                ?childIndexableItem esol:hasIndex ?childIndex .
+                ?childIndex esol:hasNext ?nextChildIndex .
+                ?nextChildIndexableItem esol:hasIndex ?nextChildIndex .
+                ?nextChildIndexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?dataN .
+            } }\">
+        <ui:dynamicView arg:indexableItem=\"{= ?childIndexableItem }\" ui:class=\"{= kn-viewer:Menu_item }\"/>
+        <ui:dynamicView arg:current_data=\"{= ?dataN }\" arg:current_indexableItem=\"{= ?nextChildIndexableItem }\" ui:class=\"{= kn-viewer:GetNextItem }\"/>
+    </ui:forEach>
+</ul>
+"""^^ui:Literal ;
+  rdfs:label "Menu component" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+.
+kn-viewer:Menu_item
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:indexableItem ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?data ?result ?behavior
+            WHERE {
+                ?indexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?data .
+                ?indexableItem &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior&gt; ?behavior .
+                ?behavior &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult&gt; ?result .
+            } }\">
+        <ui:if ui:condition=\"{= kn-viewer:isClickableItem(?behavior) }\">
+            <li>
+                <ui:createLink arg:graph=\"{= ui:globalVarValue(?globalGraph) }\" arg:pagina=\"{= ?result }\" ui:viewClass=\"{= kn-viewer:Pagina }\">
+                    <a href=\"{= ?link }\">{= ui:label(?data) }</a>
+                </ui:createLink>
+            </li>
+        </ui:if>
+        <ui:elseif ui:condition=\"{= kn-viewer:isHoverableItem(?behavior) }\">
+            <ui:dynamicView arg:data=\"{= ?data }\" arg:indexableItem=\"{= ?indexableItem }\" arg:result=\"{= ?result }\" ui:class=\"{= kn-viewer:DropdownMenu }\"/>
+        </ui:elseif>
+    </ui:forEach>
+</ui:group>
+"""^^ui:Literal ;
+  rdfs:label "Menu item component" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+.
+kn-viewer:NestedObjectEditor
+  rdf:type swa:ObjectEditorClass ;
+  swa:objectWidgetWeight [
+      rdf:type swa:WeightedExpression ;
+      swa:expression [
+          rdf:type swa:isBlankNodeProperty ;
+          arg:property [
+              sp:varName "predicate" ;
+            ] ;
+        ] ;
+      swa:weight 1 ;
+    ] ;
+  ui:prototype """
+<ui:group>
+    <ui:if ui:condition=\"{= bound(?object) }\">
+        <div class=\"swa-nested-form swa-nested-object-editor\">
+            <input name=\"new-{= ?uid }\" type=\"hidden\" value=\"{= ui:encodeNode(?object, true, true) }\"/>
+            <ui:resourceView ui:matchIds=\"nested,edit,form\" ui:resource=\"{= ?object }\"/>
+        </div>
+    </ui:if>
+    <ui:else>
+        <ui:group let:object=\"{= IRI(CONCAT(&quot;http://purl.edustandaard.nl/index/&quot;, STRUUID())) }\" let:range=\"{= swa:localRange(?predicate, ?subject) }\">
+            <input name=\"new-{= ?uid }\" type=\"hidden\" value=\"{= ui:encodeNode(?object, true, true) }\"/>
+            <ui:group let:id=\"{= ui:uniqueId() }\">
+                <input name=\"resource-{= ?id }\" type=\"hidden\" value=\"{= ui:encodeNode(?object, true, true) }\"/>
+                <input name=\"path-{= ?id }\" type=\"hidden\" value=\"{= ui:encodeNode(rdf:type) }\"/>
+                <input name=\"new-{= ?id }\" type=\"hidden\" value=\"{= ui:encodeNode(?range, true, true) }\"/>
+            </ui:group>
+            <div class=\"swa-nested-form swa-nested-object-editor\">
+                <ui:setContext ui:varName=\"mode\" ui:varValue=\"edit\">
+                    <ui:setContext ui:varName=\"resourceType\" ui:varValue=\"{= ?range }\">
+                        <ui:classView arg:subject=\"{= ?object }\" ui:class=\"{= ?range }\" ui:matchIds=\"nested,edit,form\" ui:resource=\"{= ?object }\"/>
+                    </ui:setContext>
+                </ui:setContext>
+            </div>
+        </ui:group>
+    </ui:else>
+</ui:group>
+"""^^ui:Literal ;
+  rdfs:comment "A nested form." ;
+  rdfs:label "Custom Nested object editor" ;
+  rdfs:subClassOf swa:ObjectEditor ;
+.
+kn-viewer:Pagina
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:optional "true"^^xsd:boolean ;
+      spl:predicate arg:subject ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:graph ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:pagina ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:headIncludes """
+<link href=\"lib/kn-viewer/styles/styles.css\" rel=\"stylesheet\" type=\"text/css\"/>
+"""^^ui:Literal ;
+  ui:prototype """
+<ui:setContext ui:queryGraph=\"{= ui:graphWithImports(?graph) }\">
+    <ui:setGlobalVar ui:name=\"globalGraph\" ui:value=\"{= ?graph }\"/>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?template ?swpComponent ?templateType
+            WHERE {
+                ?pagina &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftTemplate&gt; ?template .
+                ?template &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent&gt; ?swpComponent .
+            } }\">
+        <ui:dynamicView arg:graph=\"{= ?graph }\" arg:pagina=\"{= ?pagina }\" arg:subject=\"{= ?subject }\" arg:template=\"{= ?template }\" ui:class=\"{= IRI(?swpComponent) }\"/>
+    </ui:forEach>
+</ui:setContext>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  rdfs:label "Pagina component" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+.
+kn-viewer:PropertyOutput
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:current_index ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:subject ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?indexableProperty
+            WHERE {
+                ?current_index &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#indexForIndexableProperty&gt; ?indexableProperty .
+            } }\">
+        <ui:forEach ui:resultSet='{#
+                SELECT ?tekst ?propertylabel
+                WHERE {
+                    ?subject ?indexableProperty ?tekst .
+                    ?indexableProperty rdfs:label ?propertylabel .
+                    FILTER ((lang(?propertylabel) = \"nl\") || (lang(?propertylabel) = \"\")) .
+                } }'>
+            <h2>{= ?propertylabel }</h2>
+            <div data-checklinks=\"true\">
+                <ui:parse ui:str=\"{= ?tekst }\"/>
+            </div>
+        </ui:forEach>
+    </ui:forEach>
+</ui:group>
+"""^^ui:Literal ;
+  rdfs:label "IndexableProperty" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+.
+kn-viewer:SelectChild
+  rdf:type spin:SelectTemplate ;
+  spin:body [
+      rdf:type sp:Select ;
+      sp:resultVariables (
+          [
+            sp:varName "result" ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "parent" ;
+              ] ;
+            sp:predicate esol:hasParent ;
+            sp:subject [
+                sp:varName "result" ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:parent ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:labelTemplate "checks whether is has a child or not" ;
+  rdfs:subClassOf spin:SelectTemplates ;
+.
+kn-viewer:SelectData
+  rdf:type spin:SelectTemplate ;
+  spin:body [
+      rdf:type sp:Select ;
+      sp:resultVariables (
+          [
+            sp:varName "result" ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "result" ;
+              ] ;
+            sp:predicate <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftData> ;
+            sp:subject [
+                sp:varName "indexableItem" ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:indexableItem ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  rdfs:label "SelectIndexableItem" ;
+  rdfs:subClassOf spin:SelectTemplates ;
+  skos:prefLabel "SelectIndexableItem" ;
+.
+kn-viewer:SelectKleineTitelQuery
+  rdf:type spin:SelectTemplate ;
+  spin:body [
+      rdf:type sp:Select ;
+      sp:resultVariables (
+          [
+            sp:varName "indicator" ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object <http://purl.edustandaard.nl/metamodel/indicatoren/Indicator> ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "indicator" ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  spin:labelTemplate "label of select kleine titel query" ;
+  rdfs:label "kleine titel query" ;
+  rdfs:subClassOf spin:SelectTemplates ;
+  skos:prefLabel "kleine titel query" ;
+.
+kn-viewer:Sidebar
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:block ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?partTitel ?dataTitel
+            WHERE {
+                ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?partTitel .
+                ?partTitel a ?typeTitel .
+                ?partTitel &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?dataTitel .
+                FILTER (?typeTitel = &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarTitel&gt;) .
+            } }\">
+        <h2>{= ui:label(?dataTitel) }</h2>
+    </ui:forEach>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?partKleineTitel ?patternKleineTitel
+            WHERE {
+                ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?partKleineTitel .
+                ?partKleineTitel a ?typeKleineTitel .
+                ?partKleineTitel &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQuery&gt; ?query .
+                ?query &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQueryGraphPattern&gt; ?patternKleineTitel .
+                FILTER (?typeKleineTitel = &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarKleineTitel&gt;) .
+            } }\">
+        <ui:call ui:queryString=\"{= ?patternKleineTitel }\" ui:varName=\"rs\">
+            <ui:forEach ui:bindVars=\"?queryResult\" ui:resultSet=\"{= ?rs }\">
+                <h3>{= ui:label(?queryResult) }</h3>
+                <ul>
+                    <ui:forEach ui:resultSet=\"{#
+                            SELECT ?propertyNavList
+                            WHERE {
+                                ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?partNavList .
+                                ?partNavList a ?typeNavList .
+                                ?partNavList &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftProperty&gt; ?propertyNavList .
+                                FILTER (?typeNavList = &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#NavigationList&gt;) .
+                            } }\">
+                        <ui:forEach ui:resultSet=\"{#
+                                SELECT ?queryResultNavigationList
+                                WHERE {
+                                    ?queryResultNavigationList ?propertyNavList ?queryResult .
+                                } }\">
+                            <li>
+                                <a href=\"javascript:void(0)\" onclick=\"swa.load('form', { subject : '&lt;{= ?queryResultNavigationList }&gt;' });swa.load('form2', { subject : '&lt;{= ?queryResultNavigationList }&gt;' })\">{= ui:label(?queryResultNavigationList) }</a>
+                            </li>
+                        </ui:forEach>
+                    </ui:forEach>
+                </ul>
+            </ui:forEach>
+        </ui:call>
+    </ui:forEach>
+</ui:group>
+"""^^ui:Literal ;
+  rdfs:label "Sidebar" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+  skos:prefLabel "Sidebar" ;
+.
+kn-viewer:Sidebar_Filtered
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:block ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?partTitel ?dataTitel
+            WHERE {
+                ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?partTitel .
+                ?partTitel a ?typeTitel .
+                ?partTitel &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?dataTitel .
+                FILTER (?typeTitel = &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarTitel&gt;) .
+            } }\">
+        <h2>{= ui:label(?dataTitel) }</h2>
+    </ui:forEach>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?partKleineTitel ?patternKleineTitel
+            WHERE {
+                ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?partKleineTitel .
+                ?partKleineTitel a ?typeKleineTitel .
+                ?partKleineTitel &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQuery&gt; ?query .
+                ?query &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQueryGraphPattern&gt; ?patternKleineTitel .
+                FILTER (?typeKleineTitel = &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarKleineTitel&gt;) .
+            } }\">
+        <ui:call ui:queryString=\"{= ?patternKleineTitel }\" ui:varName=\"rsFiltered\">
+            <ui:forEach ui:bindVars=\"?queryResultFiltered\" ui:resultSet=\"{= ?rsFiltered }\">
+                <h3>{= ui:label(?queryResultFiltered) }</h3>
+                <ul>
+                    <ui:forEach ui:resultSet=\"{#
+                            SELECT ?typeOutputNavList
+                            WHERE {
+                                ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?partNavList .
+                                ?partNavList a ?typeNavList .
+                                ?partNavList &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftType&gt; ?typeOutputNavList .
+                                FILTER (?typeNavList = &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#NavigationList&gt;) .
+                            } }\">
+                        <ui:forEach ui:resultSet=\"{#
+                                SELECT DISTINCT ?queryResultNavigationList
+                                WHERE {
+                                    ?queryResultNavigationList a ?typeOutputNavList .
+                                    ?queryResultNavigationList skos:prefLabel ?label .
+                                    FILTER (?queryResultFiltered = UCASE(SUBSTR(?label, 1, 1))) .
+                                }
+                                ORDER BY (?queryResultNavigationList) }\">
+                            <li>
+                                <a href=\"javascript:void(0)\" onclick=\"swa.load('form', { subject : '&lt;{= ?queryResultNavigationList }&gt;' });swa.load('form2', { subject : '&lt;{= ?queryResultNavigationList }&gt;' })\">{= ui:label(?queryResultNavigationList) }</a>
+                            </li>
+                        </ui:forEach>
+                    </ui:forEach>
+                </ul>
+            </ui:forEach>
+        </ui:call>
+    </ui:forEach>
+</ui:group>
+"""^^ui:Literal ;
+  rdfs:label "Sidebar" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+  skos:prefLabel "Sidebar" ;
+.
+kn-viewer:Sidebar_Uncategorized
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:block ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?partTitel ?dataTitel
+            WHERE {
+                ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?partTitel .
+                ?partTitel a ?typeTitel .
+                ?partTitel &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?dataTitel .
+                FILTER (?typeTitel = &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarTitel&gt;) .
+            } }\">
+        <h2>{= ui:label(?dataTitel) }</h2>
+    </ui:forEach>
+    <!-- add later                  . -->
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?partKleineTitel ?patternKleineTitel ?data
+            WHERE {
+                ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?partKleineTitel .
+                ?partKleineTitel a ?typeKleineTitel .
+                ?partKleineTitel &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?data .
+                FILTER (?typeKleineTitel = &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarKleineTitel&gt;) .
+            } }\">
+        <h3>{= ui:label(?data) }</h3>
+    </ui:forEach>
+    <ul>
+        <ui:forEach ui:resultSet=\"{#
+                SELECT ?patternNavList ?queryNavList
+                WHERE {
+                    ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?partNavList .
+                    ?partNavList a ?typeNavList .
+                    ?partNavList &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQuery&gt; ?queryNavList .
+                    ?queryNavList &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQueryGraphPattern&gt; ?patternNavList .
+                    FILTER (?typeNavList = &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#NavigationList&gt;) .
+                } }\">
+            <ui:call ui:queryString=\"{= ?patternNavList }\" ui:varName=\"rs\">
+                <ui:forEach ui:bindVars=\"?queryResultNavigationList\" ui:resultSet=\"{= ?rs }\">
+                    <li>
+                        <a href=\"javascript:void(0)\" onclick=\"swa.load('form', { subject : '&lt;{= ?queryResultNavigationList }&gt;' });swa.load('form2', { subject : '&lt;{= ?queryResultNavigationList }&gt;' })\">{= ui:label(?queryResultNavigationList) }</a>
+                    </li>
+                </ui:forEach>
+            </ui:call>
+        </ui:forEach>
+    </ul>
+</ui:group>
+"""^^ui:Literal ;
+  rdfs:label "Sidebar" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+  skos:prefLabel "Sidebar" ;
+.
+kn-viewer:Template_1
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:graph ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:pagina ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:template ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group>
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?part ?swpComponent ?data ?result
+            WHERE {
+                ?template &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader&gt; ?header .
+                ?header &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek&gt; ?plek .
+                ?plek &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?part .
+                ?plek a ?plekType .
+                ?part &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?data .
+                ?part &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior&gt; ?behavior .
+                ?behavior &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult&gt; ?result .
+                FILTER (?plekType = &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek2&gt;) .
+            } }\">
+        <ui:createLink arg:graph=\"{= ?graph }\" arg:pagina=\"{= ?result }\" ui:viewClass=\"{= kn-viewer:Pagina }\">
+            <p id=\"header\">
+                <a href=\"{= ?link }\" rel=\"home\">{= ui:label(?data) }</a>
+            </p>
+        </ui:createLink>
+    </ui:forEach>
+    <div data-checklinks=\"true\">
+        <main id=\"content\">
+            <ui:forEach ui:resultSet=\"{#
+                    SELECT ?part ?swpComponent ?data ?result ?note ?plek ?label
+                    WHERE {
+                        ?template &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody&gt; ?body .
+                        ?body &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek&gt; ?plek .
+                        ?plek &lt;http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock&gt; ?block .
+                        ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?part .
+                        ?plek a ?plekType .
+                        ?part &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?data .
+                        ?data skos:note ?note .
+                        ?data skos:prefLabel ?label .
+                        FILTER (?plekType = &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek4&gt;) .
+                    } }\">
+                <h1>{= ?label }</h1>
+                <ui:parse ui:str=\"{= ?note }\"/>
+            </ui:forEach>
+        </main>
+    </div>
+    <nav id=\"navigation\">
+        <ui:forEach ui:resultSet=\"{#
+                SELECT ?part ?swpComponent ?plek
+                WHERE {
+                    ?template &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader&gt; ?header .
+                    ?header &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek&gt; ?plek .
+                    ?plek &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?part .
+                    ?part &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftSWPComponent&gt; ?swpComponent .
+                    ?plek a ?plekType .
+                    FILTER (?plekType = &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#plek3&gt;) .
+                } }\">
+            <ui:dynamicView arg:object=\"{= ?part }\" ui:class=\"{= IRI(?swpComponent) }\"/>
+        </ui:forEach>
+    </nav>
+    <footer id=\"footer\">
+        <ui:forEach ui:resultSet=\"{#
+                SELECT ?part ?swpComponent ?plek
+                WHERE {
+                    ?template &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftFooter&gt; ?footer .
+                    ?footer &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek&gt; ?plek .
+                    ?plek &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?part .
+                    ?part &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftSWPComponent&gt; ?swpComponent .
+                    ?plek a ?plekType .
+                    FILTER (?plekType = &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek5&gt;) .
+                } }\">
+            <ui:dynamicView arg:object=\"{= ?part }\" ui:class=\"{= IRI(?swpComponent) }\"/>
+        </ui:forEach>
+    </footer>
+    <script src=\"lib/kn-viewer/scripts/scripts.js\"/>
+    <script src=\"lib/kn-viewer/scripts/inlinelinks.js\"/>
+</ui:group>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  rdfs:label "Template_1 - a simple template consisted out of 5 plekken" ;
+  rdfs:subClassOf kn-viewer:Templates ;
+.
+kn-viewer:Template_2
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:optional "true"^^xsd:boolean ;
+      spl:predicate arg:subject ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:graph ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:pagina ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:template ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<body itemscope=\"itemscope\" itemtype=\"http://schema.org/WebPage\">
+    <ui:forEach ui:resultSet=\"{#
+            SELECT ?part ?swpComponent ?data ?result
+            WHERE {
+                ?template &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader&gt; ?header .
+                ?header &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek&gt; ?plek .
+                ?plek &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?part .
+                ?plek a ?plekType .
+                ?part &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?data .
+                ?part &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior&gt; ?behavior .
+                ?behavior &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult&gt; ?result .
+                FILTER (?plekType = &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek2&gt;) .
+            } }\">
+        <ui:createLink arg:graph=\"{= ?graph }\" arg:pagina=\"{= ?result }\" ui:viewClass=\"{= kn-viewer:Pagina }\">
+            <p id=\"header\">
+                <a href=\"{= ?link }\" rel=\"home\">{= ui:label(?data) }</a>
+            </p>
+        </ui:createLink>
+    </ui:forEach>
+    <nav id=\"breadcrumbs\" itemprop=\"breadcrumb\">
+        <ui:forEach ui:resultSet=\"{#
+                SELECT ?data ?behavior ?result
+                WHERE {
+                    ?breadcrumb a &lt;http://taxonic.kennisnet.com/ontologies/viewerblock#BreadCrumbs&gt; .
+                    ?breadcrumb &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?breadcrumbHomePart .
+                    ?breadcrumbHomePart &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?data .
+                    ?breadcrumbHomePart &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior&gt; ?behavior .
+                    ?behavior &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult&gt; ?result .
+                } }\">
+            <ui:loadable ui:loadId=\"form2\">
+                <ui:if ui:condition=\"{= bound(?subject) }\">
+                    <p>
+                        <ui:createLink arg:graph=\"{= ?graph }\" arg:pagina=\"{= ?result }\" ui:viewClass=\"{= kn-viewer:Pagina }\">
+                            <a href=\"{= ?link }\" rel=\"home\">{= ui:label(?data) }</a> &gt;
+</ui:createLink>
+                        <ui:createLink arg:graph=\"{= ?graph }\" arg:pagina=\"{= ?pagina }\" ui:viewClass=\"{= kn-viewer:Pagina }\">
+                            <a href=\"{= ?link }\" rel=\"section\">{= ui:label(?pagina) }</a> &gt;
+</ui:createLink>
+                        <b>{= ui:label(?subject) }</b>
+                    </p>
+                </ui:if>
+                <ui:else>
+                    <p>
+                        <ui:createLink arg:graph=\"{= ?graph }\" arg:pagina=\"{= ?result }\" ui:viewClass=\"{= kn-viewer:Pagina }\">
+                            <a href=\"{= ?link }\" rel=\"home\">{= ui:label(?data) }</a> &gt;
+</ui:createLink>
+                        <b>{= ui:label(?pagina) }</b>
+                    </p>
+                </ui:else>
+            </ui:loadable>
+        </ui:forEach>
+    </nav>
+    <main id=\"content\">
+        <ui:loadable ui:loadId=\"form\">
+            <ui:if ui:condition=\"{= bound(?subject) }\">
+                <header>
+                    <h1>{= ui:label(?subject) }</h1>
+                </header>
+                <ui:setContext ui:queryGraph=\"{= ui:graphWithImports(?graph) }\">
+                    <ui:forEach ui:resultSet=\"{#
+                            SELECT ?property ?pindex
+                            WHERE {
+                                ?template &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody&gt; ?body5 .
+                                ?body5 &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek&gt; ?plek5 .
+                                ?plek5 a ?type5 .
+                                ?plek5 &lt;http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock&gt; ?block .
+                                ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?part5 .
+                                ?part5 &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#hasRootIndexableProperty&gt; ?pindex .
+                                ?pindex esol:first ?first .
+                                ?pindex &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#indexForIndexableProperty&gt; ?property .
+                                FILTER (?type5 = &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek5&gt;) .
+                                ?part5 a ?typepart5 .
+                                FILTER (?first = true) .
+                                FILTER (?typepart5 = &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingBody&gt;) .
+                            } }\">
+                        <ui:dynamicView arg:current_index=\"{= ?pindex }\" arg:subject=\"{= ?subject }\" ui:class=\"{= kn-viewer:IndexableProperty }\"/>
+                    </ui:forEach>
+                </ui:setContext>
+            </ui:if>
+            <ui:else>
+                <ui:forEach ui:resultSet=\"{#
+                        SELECT ?definition ?data5
+                        WHERE {
+                            ?template &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody&gt; ?body5 .
+                            ?body5 &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek&gt; ?plek5 .
+                            ?plek5 a ?type5 .
+                            ?plek5 &lt;http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock&gt; ?block .
+                            ?block &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?part5 .
+                            ?part5 &lt;http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata&gt; ?data5 .
+                            ?data5 skos:definition ?definition .
+                            FILTER (?type5 = &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek5&gt;) .
+                            ?part5 a ?typepart5 .
+                            FILTER (?typepart5 = &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingBody&gt;) .
+                        } }\">
+                    <header>
+                        <h1>{= ui:label(?data5) }</h1>
+                    </header>
+                    <!-- Als data uit html bestaat: <ui:parse ui:str=\"{=?data5}\"/> -->
+                    <div data-checklinks=\"true\">
+                        <ui:parse ui:str=\"{= ?definition }\"/>
+                    </div>
+                </ui:forEach>
+            </ui:else>
+        </ui:loadable>
+    </main>
+    <nav id=\"menu\">
+        <ui:setContext ui:queryGraph=\"{= ui:graphWithImports(?graph) }\">
+            <ui:forEach ui:resultSet=\"{#
+                    SELECT ?block ?swpComponent4
+                    WHERE {
+                        ?template &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody&gt; ?body .
+                        ?body &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek&gt; ?plek .
+                        ?plek a ?type1 .
+                        ?plek &lt;http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock&gt; ?block .
+                        ?block &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent&gt; ?swpComponent4 .
+                        FILTER (?type1 = &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek4&gt;) .
+                    } }\">
+                <ui:dynamicView arg:block=\"{= ?block }\" ui:class=\"{= IRI(?swpComponent4) }\"/>
+            </ui:forEach>
+        </ui:setContext>
+    </nav>
+    <nav id=\"navigation\">
+        <ui:forEach ui:resultSet=\"{#
+                SELECT ?part ?swpComponent ?plek
+                WHERE {
+                    ?template &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader&gt; ?header .
+                    ?header &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek&gt; ?plek .
+                    ?plek &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?part .
+                    ?part &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftSWPComponent&gt; ?swpComponent .
+                    ?plek a ?plekType .
+                    FILTER (?plekType = &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#plek3&gt;) .
+                } }\">
+            <ui:dynamicView arg:object=\"{= ?part }\" ui:class=\"{= IRI(?swpComponent) }\"/>
+        </ui:forEach>
+    </nav>
+    <footer id=\"footer\">
+        <ui:forEach ui:resultSet=\"{#
+                SELECT ?part ?swpComponent ?plek
+                WHERE {
+                    ?template &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftFooter&gt; ?footer .
+                    ?footer &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek&gt; ?plek .
+                    ?plek &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart&gt; ?part .
+                    ?part &lt;http://taxonic.kennisnet.com/ontologies/viewerpart#heeftSWPComponent&gt; ?swpComponent .
+                    ?plek a ?plekType .
+                    FILTER (?plekType = &lt;http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek6&gt;) .
+                } }\">
+            <ui:dynamicView arg:object=\"{= ?part }\" ui:class=\"{= IRI(?swpComponent) }\"/>
+        </ui:forEach>
+    </footer>
+    <script src=\"lib/kn-viewer/scripts/scripts.js\"/>
+    <script src=\"lib/kn-viewer/scripts/inlinelinks.js\"/>
+</body>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  rdfs:label "Template_2 - a template consisted out of 6 plekken" ;
+  rdfs:subClassOf kn-viewer:Templates ;
+.
+kn-viewer:Templates
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Templates" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+.
+kn-viewer:Viewer
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:graph ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:viewer ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:headIncludes """
+<link href=\"lib/kn-viewer/styles.css\" rel=\"stylesheet\" type=\"text/css\"/>
+"""^^ui:Literal ;
+  ui:prototype """
+<ui:group>
+    <body itemscope=\"itemscope\" itemtype=\"http://schema.org/WebPage\">
+        <ui:setContext ui:queryGraph=\"{= ui:graphWithImports(?graph) }\">
+            <ui:forEach ui:resultSet=\"{#
+                    SELECT ?hoofdPagina ?swpComponent
+                    WHERE {
+                        ?viewer &lt;http://taxonic.kennisnet.com/ontologies/viewer#heeftHoofdPagina&gt; ?hoofdPagina .
+                        ?hoofdPagina &lt;http://taxonic.kennisnet.com/ontologies/viewer#heeftSWPComponent&gt; ?swpComponent .
+                    } }\">
+                <ui:dynamicView arg:graph=\"{= ?graph }\" arg:pagina=\"{= ?hoofdPagina }\" ui:class=\"{= IRI(?swpComponent) }\"/>
+            </ui:forEach>
+        </ui:setContext>
+        <script src=\"lib/kn-viewer/scripts/scripts.js\"/>
+        <script src=\"lib/kn-viewer/scripts/inlinelinks.js\"/>
+    </body>
+</ui:group>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  rdfs:label "Viewer component" ;
+  rdfs:subClassOf kn-viewer:GenericViewerComponents ;
+.
+kn-viewer:hasChild
+  rdf:type spin:Function ;
+  spin:body [
+      rdf:type sp:Ask ;
+      sp:where (
+          [
+            sp:object spin:_arg1 ;
+            sp:predicate esol:hasParent ;
+            sp:subject spin:_arg2 ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate sp:arg1 ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:returnType xsd:boolean ;
+  rdfs:label "hasChild" ;
+  rdfs:subClassOf spl:BooleanFunctions ;
+  skos:prefLabel "hasChild" ;
+.
+kn-viewer:hasNext
+  rdf:type spin:Function ;
+  spin:body [
+      rdf:type sp:Ask ;
+      sp:where (
+          [
+            sp:object spin:_arg2 ;
+            sp:predicate esol:hasNext ;
+            sp:subject spin:_arg1 ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate sp:arg1 ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:returnType xsd:boolean ;
+  rdfs:label "hasNext" ;
+  rdfs:subClassOf spl:BooleanFunctions ;
+  skos:prefLabel "hasNext" ;
+.
+kn-viewer:isClickableItem
+  rdf:type spin:Function ;
+  spin:body [
+      rdf:type sp:Ask ;
+      sp:where (
+          [
+            sp:object <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_arg1 ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate sp:arg1 ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:returnType xsd:boolean ;
+  rdfs:label "isClickableItem" ;
+  rdfs:subClassOf spl:BooleanFunctions ;
+  skos:prefLabel "isClickableItem" ;
+.
+kn-viewer:isHoverableItem
+  rdf:type spin:Function ;
+  spin:body [
+      rdf:type sp:Ask ;
+      sp:where (
+          [
+            sp:object <http://taxonic.kennisnet.com/ontologies/viewerpart#Hover> ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_arg1 ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate sp:arg1 ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:returnType xsd:boolean ;
+  rdfs:label "isClickableItem" ;
+  rdfs:subClassOf spl:BooleanFunctions ;
+  skos:prefLabel "isClickableItem" ;
+.
+kn-viewer:isPaginaType
+  rdf:type spin:Function ;
+  spin:body [
+      rdf:type sp:Ask ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "type" ;
+              ] ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_arg1 ;
+          ]
+          [
+            rdf:type sp:Values ;
+            sp:bindings (
+                (
+                  <http://taxonic.kennisnet.com/ontologies/viewer#AnderePagina>
+                )
+                (
+                  <http://taxonic.kennisnet.com/ontologies/viewer#HoofdPagina>
+                )
+              ) ;
+            sp:varNames (
+                "type"
+              ) ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate sp:arg1 ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:returnType xsd:boolean ;
+  rdfs:label "isClickableItem" ;
+  rdfs:subClassOf spl:BooleanFunctions ;
+  skos:prefLabel "isClickableItem" ;
+.
+kn-viewer:isParent
+  rdf:type spin:AskTemplate ;
+  spin:body [
+      rdf:type sp:Ask ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "parent" ;
+              ] ;
+            sp:predicate esol:hasParent ;
+            sp:subject [
+                sp:varName "childOfSiblingIndex" ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:parent ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  rdfs:subClassOf spin:AskTemplates ;
+.

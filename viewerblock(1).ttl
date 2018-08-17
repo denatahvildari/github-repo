@@ -1,0 +1,59 @@
+# baseURI: urn:x-evn-master:viewerblock
+# imports: http://datashapes.org/dash
+# imports: http://spinrdf.org/spl
+# imports: urn:x-evn-master:templateontology
+
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://taxonic.kennisnet.com/ontologies/viewerblock#AbstractBlock>
+  rdf:type owl:Class ;
+  rdfs:label "AbstractBlock" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewertemplate#AbstractSWPComponents> ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerblock#BeschrijvingBlock>
+  rdf:type owl:Class ;
+  rdfs:label "BeschrijvingBlock" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerblock#Block> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerblock#Block>
+  rdf:type owl:Class ;
+  rdfs:label "Block" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerblock#AbstractBlock> ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerblock#BreadCrumbs>
+  rdf:type owl:Class ;
+  rdfs:label "BreadCrumbsBlock" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerblock#Block> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerblock#SideBar>
+  rdf:type owl:Class ;
+  rdfs:label "SideBarBlock" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerblock#Block> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerblock#heeftBlock>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerblock#Plek> ;
+  rdfs:label "heeftBlock" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewerblock#Block> ;
+.
+<http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek> ;
+  rdfs:label "heeftBlock" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewerblock#Block> ;
+.
+<urn:x-evn-master:viewerblock>
+  rdf:type owl:Ontology ;
+  metadata:status metadata:UnderDevelopmentStatus ;
+  <http://topbraid.org/swa#defaultNamespace> "http://taxonic.kennisnet.com/ontologies/vviewerblock#" ;
+  rdfs:label "ViewerBlock Ontology" ;
+  rdfs:label "viewerblock" ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://spinrdf.org/spl> ;
+  owl:imports <urn:x-evn-master:templateontology> ;
+.

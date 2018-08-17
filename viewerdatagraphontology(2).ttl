@@ -1,0 +1,106 @@
+# baseURI: urn:x-evn-master:viewerdatagraphontology
+# imports: http://datashapes.org/dash
+# imports: http://spinrdf.org/spl
+# imports: urn:x-evn-master:ordered_lists
+
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.edustandaard.nl/model/viewerdata/Contactpaginatekst>
+  rdf:type owl:Class ;
+  rdfs:label "Contactpaginatekst" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/viewerdata/Viewertekst> ;
+.
+<http://purl.edustandaard.nl/model/viewerdata/Disclaimertekst>
+  rdf:type owl:Class ;
+  rdfs:label "Disclaimertekst" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/viewerdata/Viewertekst> ;
+.
+<http://purl.edustandaard.nl/model/viewerdata/Footertekst>
+  rdf:type owl:Class ;
+  rdfs:label "Footertekst" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/viewerdata/Viewertekst> ;
+.
+<http://purl.edustandaard.nl/model/viewerdata/Hulpbijgebruiktekst>
+  rdf:type owl:Class ;
+  rdfs:label "Hulpbijgebruiktekst" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/viewerdata/Viewertekst> ;
+.
+<http://purl.edustandaard.nl/model/viewerdata/Labeltekst>
+  rdf:type owl:Class ;
+  rdfs:label "Labeltekst" ;
+  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+.
+<http://purl.edustandaard.nl/model/viewerdata/Landingspaginatekst>
+  rdf:type owl:Class ;
+  rdfs:label "Landingspaginatekst" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/viewerdata/Viewertekst> ;
+.
+<http://purl.edustandaard.nl/model/viewerdata/Overdezeviewertekst>
+  rdf:type owl:Class ;
+  rdfs:label "Overdezeviewertekst" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/viewerdata/Viewertekst> ;
+.
+<http://purl.edustandaard.nl/model/viewerdata/Privacyverklaringtekst>
+  rdf:type owl:Class ;
+  rdfs:label "Privacyverklaringtekst" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/viewerdata/Viewertekst> ;
+.
+<http://purl.edustandaard.nl/model/viewerdata/Viewertekst>
+  rdf:type owl:Class ;
+  rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+  rdfs:label "Viewertekst" ;
+  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality 1 ;
+      owl:onProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality 1 ;
+      owl:onProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality 1 ;
+      owl:onProperty <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality 1 ;
+      owl:onProperty <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+    ] ;
+.
+<http://www.w3.org/2004/02/skos/core#Concept>
+  rdf:type owl:Class ;
+  rdfs:label "Concept" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2004/02/skos/core#definition>
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+  rdfs:label "definition" ;
+  rdfs:range rdf:HTML ;
+.
+<http://www.w3.org/2004/02/skos/core#prefLabel>
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+  rdfs:label "preferred label" ;
+  rdfs:range xsd:string ;
+.
+<urn:x-evn-master:viewerdatagraphontology>
+  rdf:type owl:Ontology ;
+  metadata:status metadata:UnderDevelopmentStatus ;
+  <http://topbraid.org/swa#defaultNamespace> "http://purl.edustandaard.nl/model/viewerdata/" ;
+  rdfs:comment "De viewer data graph ontology wordt gebruikt om data (teksten) specifiek voor een viewer op te stellen." ;
+  rdfs:label "ViewerDataGraph Ontology" ;
+  rdfs:label "ViewerDataGraphOntology" ;
+  rdfs:label "viewerdatagraphontology" ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://spinrdf.org/spl> ;
+  owl:imports <urn:x-evn-master:ordered_lists> ;
+.

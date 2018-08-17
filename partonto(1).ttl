@@ -1,0 +1,236 @@
+# baseURI: urn:x-evn-master:partonto
+# imports: http://datashapes.org/dash
+# imports: http://spinrdf.org/spl
+# imports: urn:x-evn-master:viewerblock
+
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://taxonic.kennisnet.com/ontologies/viewerblock#Block>
+  rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewerblock#Block-heeftpart> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewerblock#Block-heeftpart-0> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerblock#Block-heeftpart>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerblock#Block-heeftpart-0>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#AbstractPart>
+  rdf:type owl:Class ;
+  rdfs:label "AbstractPart" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#BC>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BreadCrumbs> ;
+  rdfs:label "BC" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Behavior>
+  rdf:type owl:Class ;
+  rdfs:label "Behavior" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingBody>
+  rdf:type owl:Class ;
+  rdfs:label "BeschrijvingBody" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Bescrhrijving> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingKleineTitel>
+  rdf:type owl:Class ;
+  rdfs:label "BeschrijvingKleineTitel" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Bescrhrijving> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingTitel>
+  rdf:type owl:Class ;
+  rdfs:label "BeschrijvingTitel" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Bescrhrijving> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Bescrhrijving>
+  rdf:type owl:Class ;
+  rdfs:label "BescrhrijvingPart" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Result> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Block>
+  rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewerpart#Block-heeftPart> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewerpart#Block-heeftPart-0> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewerpart#Block-heeftPart-1> ;
+  <http://www.w3.org/ns/shacl#property> <http://taxonic.kennisnet.com/ontologies/viewerpart#Block-heeftPart-2> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Block-heeftPart>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftPart> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Block-heeftPart-0>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftPart> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Block-heeftPart-1>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftPart> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Block-heeftPart-2>
+  rdf:type <http://www.w3.org/ns/shacl#PropertyShape> ;
+  <http://www.w3.org/ns/shacl#path> <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftPart> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#BreadCrumbsItems>
+  rdf:type owl:Class ;
+  rdfs:label "BreadCrumbsPart" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#ExternePagina>
+  rdf:type owl:Class ;
+  rdfs:label "ExternePagina" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Result> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Foot>
+  rdf:type owl:Class ;
+  rdfs:label "Foot" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#HeeftRootIndex>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Menue> ;
+  rdfs:label "HeeftRootIndex" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Hover>
+  rdf:type owl:Class ;
+  rdfs:label "Hover" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Behavior> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#ITELHEAD>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#TitelHeader> ;
+  rdfs:label "ITELHEAD" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Logo>
+  rdf:type owl:Class ;
+  rdfs:label "LogoPart" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Menue>
+  rdf:type owl:Class ;
+  rdfs:label "MenuPart" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Result> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#MneuItem>
+  rdf:type owl:Class ;
+  rdfs:label "MenuItem" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Menue> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#NavigationList>
+  rdf:type owl:Class ;
+  rdfs:label "NavigationList" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarItems> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#PLEK1>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Plek1> ;
+  rdfs:label "PLEK1" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Part>
+  rdf:type owl:Class ;
+  rdfs:label "Part" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#AbstractPart> ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Query>
+  rdf:type owl:Class ;
+  rdfs:label "Query" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Result>
+  rdf:type owl:Class ;
+  rdfs:label "Result" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarItems>
+  rdf:type owl:Class ;
+  rdfs:label "SideBarPart" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarKleineTitel>
+  rdf:type owl:Class ;
+  rdfs:label "SideBarKleineTitel" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarItems> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarTitel>
+  rdf:type owl:Class ;
+  rdfs:label "SideBarTitel" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarItems> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#TitelHeader>
+  rdf:type owl:Class ;
+  rdfs:label "TitelHeader" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#click>
+  rdf:type owl:Class ;
+  rdfs:label "click" ;
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Behavior> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+  rdfs:label "heeftBehavior" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewerpart#Behavior> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#heeftInputParameter>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Query> ;
+  rdfs:label "heeftInputParameter" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#heeftPart>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Plek> ;
+  rdfs:label "heeftPart" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQuery>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+  rdfs:label "heeftQuery" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewerpart#Query> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQueryGraphPattern>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Query> ;
+  rdfs:label "heeftQueryGraphPattern" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQuerySolution>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Query> ;
+  rdfs:label "heeftQuerySolution" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Behavior> ;
+  rdfs:label "heeftResult" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewerpart#Result> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#heeftSWPComponent>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+  rdfs:label "heeftSWPComponent" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek> ;
+  rdfs:label "heeftpart" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+.
+<urn:x-evn-master:partonto>
+  rdf:type owl:Ontology ;
+  metadata:status metadata:UnderDevelopmentStatus ;
+  <http://topbraid.org/swa#defaultNamespace> "http://taxonic.kennisnet.com/ontologies/viewerpart#" ;
+  rdfs:label "ViewerPart Ontology" ;
+  rdfs:label "partonto" ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://spinrdf.org/spl> ;
+  owl:imports <urn:x-evn-master:viewerblock> ;
+.

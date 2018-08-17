@@ -1,0 +1,949 @@
+# baseURI: urn:x-evn-master:asset_ontology_
+# imports: http://datashapes.org/dash
+# imports: http://spinrdf.org/spl
+# imports: urn:x-evn-master:partonto
+# imports: urn:x-evn-master:viewset_vensters_encyclopedie
+
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://taxonic.kennisnet.com/ontologies/viewer#AnderePagina>
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Result> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewer#HoofdPagina>
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerpart#Result> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewer#AnderePagina> ;
+  rdfs:label "Begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Begrippen-Pagina>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewer#AnderePagina> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Pagina" ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftTemplate> <http://taxonic.kennisnet.com/ontologies/viewerasset#Template-Begrippen> ;
+  rdfs:label "Begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BeschijvingBody-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingBody> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#hasRootIndexableProperty> <http://taxonic.kennisnet.com/ontologies/viewerasset#p1> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/b4261f17-b90d-417e-b9c2-e8b9ed61ee08> ;
+  rdfs:label "BeschijvingBody-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingBody-DPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingBody> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#hasRootIndexableProperty> <http://taxonic.kennisnet.com/ontologies/viewerasset#p1> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/345d871a-ef47-4148-9fb3-15f1e20ec447> ;
+  rdfs:label "BeschrijvingBody-DPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingKT-DPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingKleineTitel> ;
+  rdfs:label "BeschrijvingKT-DPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingKT-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingKleineTitel> ;
+  rdfs:label "BeschrijvingKT-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingKT-begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingKleineTitel> ;
+  rdfs:label "BeschrijvingKT-begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingKleineTitelHoofdpagina>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingKleineTitel> ;
+  rdfs:label "BeschrijvingKleineTitelHoofdpagina" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingTitel-DPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingTitel> ;
+  rdfs:label "BeschrijvingTitel-DPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingTitel-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingTitel> ;
+  rdfs:label "BeschrijvingTitel-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingTitelHoofdpagina>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingTitel> ;
+  rdfs:label "BeschrijvingTitelHoofdpagina" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Beschrijvingbody-Begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingBody> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#hasRootIndexableProperty> <http://taxonic.kennisnet.com/ontologies/viewerasset#p1> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/916307d3-113a-4210-b6c5-dcdb6ffe2b12> ;
+  rdfs:label "Beschrijvingbody-Begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Beschrijvingtitel-begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingTitel> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/conceptscheme/Begrippen> ;
+  rdfs:label "Beschrijvingtitel-begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BlockBeschrijvingBegrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerblock#BeschrijvingBlock> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingKT-begrippen> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#Beschrijvingbody-Begrippen> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#Beschrijvingtitel-begrippen> ;
+  rdfs:label "BlockBeschrijvingBegrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BlockBeschrijvingDPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerblock#BeschrijvingBlock> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingBody-DPO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingKT-DPO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingTitel-DPO> ;
+  rdfs:label "BlockBeschrijvingDPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BlockBeschrijvingPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerblock#BeschrijvingBlock> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#BeschijvingBody-PO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingKT-PO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#BeschrijvingTitel-PO> ;
+  rdfs:label "BlockBeschrijvingPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BlockBeschrijvingVO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerblock#BeschrijvingBlock> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#beschrijving-vo> ;
+  rdfs:label "BlockBeschrijvingVO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BlockHoofdpagina>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerblock#BeschrijvingBlock> ;
+  rdfs:label "BlockHoofdpagina" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#BreadcrumbsBlockInstance>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerblock#BreadCrumbs> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomeBreadcrumb> ;
+  rdfs:label "BreadcrumbsBlockInstance" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#DPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewer#AnderePagina> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Pagina" ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftTemplate> <http://taxonic.kennisnet.com/ontologies/viewerasset#Template-DPO> ;
+  rdfs:label "DPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Data>
+  rdf:type owl:Class ;
+  rdfs:label "Data" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#DropdownMenuInstance>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Menue> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#HeeftRootIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#ddm0> ;
+  rdfs:label "DropdownMenuInstance" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#ExterneContactPagina>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#ExternePagina> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftUrl> "https://www.vensters.nl/contact"^^xsd:anyURI ;
+  rdfs:label "ExterneContactPagina" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#ExterneDisclaimerPagina>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#ExternePagina> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftUrl> "https://www.vensters.nl/disclaimer"^^xsd:anyURI ;
+  rdfs:label "ExterneDisclaimerPagina" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Footer>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Foot> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#fi0> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Footer" ;
+  rdfs:label "Footer" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Footer-Contact>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerasset#Data> ;
+  rdfs:comment "<a href=\"swp?_viewClass=kn-viewer%3APagina&amp;graph=urn%3Ax-evn-master%3Aasset_ontology_&amp;pagina=http%3A%2F%2Ftaxonic.kennisnet.com%2Fontologies%2Fviewerasset%23hoofdpagina-VE\">Contact</a>" ;
+  rdfs:label "Footer-Contact" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Footer-Disclaimer>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerasset#Data> ;
+  rdfs:comment "<a href=\"swp?_viewClass=kn-viewer%3APagina&amp;graph=urn%3Ax-evn-master%3Aasset_ontology_&amp;pagina=http%3A%2F%2Ftaxonic.kennisnet.com%2Fontologies%2Fviewerasset%23hoofdpagina-VE\">Disclaimer</a>" ;
+  rdfs:label "Footer-Disclaimer" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Footer-Vensters2018>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerasset#Data> ;
+  rdfs:comment "Vensters &copy; 2018" ;
+  rdfs:label "Footer-Vensters2018" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Footer2>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Foot> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#fi1> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/81086336-f91f-49d3-8c14-0514f6999436> ;
+  rdfs:comment "Vensters 2018" ;
+  rdfs:label "Footer2" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Footer3>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Foot> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#fi2> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/984b3326-c54f-470f-a4d5-e6ad13dd3834> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#click-contact> ;
+  rdfs:label "Footer3" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Footer4>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Foot> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#fi3> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/4e5c5950-28b8-40eb-84a2-2e6f5ce4f99d> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#click-disclaimer> ;
+  rdfs:label "Footer4" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#FooterInstance>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerasset#Data> ;
+  rdfs:label "FooterInstance" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomeBreadcrumb>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BreadCrumbsItems> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/0b7a8fe8-e28b-4b47-a121-172d847f94df> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#click-home> ;
+  rdfs:label "HomeBreadcrumb" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageBeschrijving>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Bescrhrijving> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/8496151e-3ff6-4a22-87b9-49de1ffe0044> ;
+  rdfs:label "HomePageBeschrijving" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageBeschrijvingBody>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingBody> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/8496151e-3ff6-4a22-87b9-49de1ffe0044> ;
+  rdfs:label "HomePageBeschrijvingBody" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageBeschrijvingTitel>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingTitel> ;
+  rdfs:label "HomePageBeschrijvingTitel" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageBeshrijving>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerblock#BeschrijvingBlock> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageBeschrijving> ;
+  rdfs:label "HomePageBeshrijving" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageBody>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Body> ;
+  rdfs:label "HomePageBody" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageFooter>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Footer> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek5> ;
+  rdfs:label "HomePageFooter" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageHeader>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Header> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek1> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageplek3> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomepagePlek2> ;
+  rdfs:label "HomePageHeader" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageLogo>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Logo> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#logobehavior> ;
+  rdfs:label "HomePageLogo" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek1>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek1> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageLogo> ;
+  rdfs:label "HomePagePlek1" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek3>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek4> ;
+  <http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageBeshrijving> ;
+  rdfs:label "HomePagePlek4" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek5>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek5> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#Footer> ;
+  rdfs:label "HomePagePlek5" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageTitel>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#TitelHeader> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/44aaa200-cedb-4075-a511-dc0f3b094175> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#click-titlehead> ;
+  rdfs:label "HomePageTitel" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageplek3>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#plek3> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#MainMenuInstance> ;
+  rdfs:label "HomePageplek3" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomeTemplate>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template1> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Body> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek3> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftFooter> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Footer> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek5> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Header> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek1> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageplek3> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomepagePlek2> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Template_1" ;
+  rdfs:label "HomeTemplate" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#HomepagePlek2>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek2> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageTitel> ;
+  rdfs:label "HomepagePlek2" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Hoofdpagina>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewer#HoofdPagina> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Pagina" ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftTemplate> <http://taxonic.kennisnet.com/ontologies/viewertemplate#homet1> ;
+  rdfs:label "Hoofdpagina" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#IndexableProperty>
+  rdf:type owl:Class ;
+  rdfs:label "IndexableProperty" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/ordered_lists/IndexableItem> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#KT-DPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarKleineTitel> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/345d871a-ef47-4148-9fb3-15f1e20ec447> ;
+  rdfs:label "KT-DPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#KT-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarKleineTitel> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQuery> <http://taxonic.kennisnet.com/ontologies/viewerasset#query-PO-kt> ;
+  rdfs:label "KT-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Kleine-VO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarKleineTitel> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQuery> <http://taxonic.kennisnet.com/ontologies/viewerasset#query-VO> ;
+  rdfs:label "Kleine-VO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#LandingspaginatekstHoofdpagina>
+  rdf:type <http://purl.edustandaard.nl/model/viewerdata/Landingspaginatekst> ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "LandingspaginatekstHoofdpagina" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#MainMenuInstance>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Menue> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#HeeftRootIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#m0> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Menu" ;
+  rdfs:label "MainMenuInstance" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#MenuItem-Begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#MneuItem> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#m3> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/conceptscheme/Begrippen> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#click-begrippen> ;
+  rdfs:label "MenuItem-Begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#MenuItem-DPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#MneuItem> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#ddm3> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/345d871a-ef47-4148-9fb3-15f1e20ec447> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#click-dpo> ;
+  rdfs:label "MenuItem-DPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#MenuItem-Indicatoren>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#MneuItem> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#m2> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/6c15ecc7-bcca-4616-8644-7cee24709b53> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#hover-indicatoren> ;
+  rdfs:label "MenuItem-Indicatoren" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#MenuItem-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#MneuItem> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#ddm1> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/b4261f17-b90d-417e-b9c2-e8b9ed61ee08> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#click-po> ;
+  rdfs:label "MenuItem-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#MenuItem-VO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#MneuItem> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#ddm2> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/d74804c8-020d-4144-9c1b-7ec48b30c0e5> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#click-vo> ;
+  rdfs:label "MenuItem-VO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#MenuItemHomepage>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#MneuItem> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasIndex> <http://taxonic.kennisnet.com/ontologies/viewerasset#m1> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/0b7a8fe8-e28b-4b47-a121-172d847f94df> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#click-home> ;
+  rdfs:label "MenuItemHomepage" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Menue>
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/ordered_lists/IndexableItem> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Nav-DPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#NavigationList> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQuery> <http://taxonic.kennisnet.com/ontologies/viewerasset#query-dpo> ;
+  rdfs:label "Nav-DPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Nav-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#NavigationList> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftProperty> <http://purl.edustandaard.nl/metamodel/indicatoren/indicatorcategorie> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftBehavior> <http://taxonic.kennisnet.com/ontologies/viewerasset#click-sidebar-PO> ;
+  rdfs:label "Nav-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Nav-VO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#NavigationList> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftProperty> <http://purl.edustandaard.nl/metamodel/indicatoren/indicatorcategorie> ;
+  rdfs:label "Nav-VO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewer#AnderePagina> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Pagina" ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftTemplate> <http://taxonic.kennisnet.com/ontologies/viewerasset#Template-PO> ;
+  rdfs:label "PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek1-Instance>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek1> ;
+  rdfs:label "Plek1-Instance" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek2Instance>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek2> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerpart#ITELHEAD> ;
+  rdfs:label "Plek2Instance" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek3Instance>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#plek3> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#MainMenuInstance> ;
+  rdfs:label "Plek3Instance" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek4-Begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek4> ;
+  <http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock> <http://taxonic.kennisnet.com/ontologies/viewerasset#SideBarBlockBegrippen> ;
+  rdfs:label "Plek4-Begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek4-Hoofdpagina>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek4> ;
+  <http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock> <http://taxonic.kennisnet.com/ontologies/viewerasset#BlockHoofdpagina> ;
+  rdfs:label "Plek4-Hoofdpagina" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek4-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek4> ;
+  <http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock> <http://taxonic.kennisnet.com/ontologies/viewerasset#SideBarBlock-PO> ;
+  rdfs:label "Plek4-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek4-VO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek4> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Sidebar" ;
+  <http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock> <http://taxonic.kennisnet.com/ontologies/viewerasset#SideBarBlockVO> ;
+  rdfs:label "Plek4-VO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek5-Begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek5> ;
+  <http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock> <http://taxonic.kennisnet.com/ontologies/viewerasset#BlockBeschrijvingBegrippen> ;
+  rdfs:label "Plek5-Begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek5-DPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek5> ;
+  <http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock> <http://taxonic.kennisnet.com/ontologies/viewerasset#BlockBeschrijvingDPO> ;
+  rdfs:label "Plek5-DPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek5-Hoofdpagina-Footer>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek5> ;
+  rdfs:label "Plek5-Hoofdpagina-Footer" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek5-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek5> ;
+  <http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock> <http://taxonic.kennisnet.com/ontologies/viewerasset#BlockBeschrijvingPO> ;
+  rdfs:label "Plek5-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek5-VO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek5> ;
+  <http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock> <http://taxonic.kennisnet.com/ontologies/viewerasset#BlockBeschrijvingVO> ;
+  rdfs:label "Plek5-VO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Plek6-vo-footer>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek6> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#Footer> ;
+  rdfs:label "Plek6-vo-footer" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#SideBarBlock-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerblock#SideBar> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#KT-PO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#Nav-PO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#Titel-PO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Sidebar" ;
+  rdfs:label "SideBarBlock-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#SideBarBlockBegrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerblock#SideBar> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#kt-begrippen> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#nav-begrippen> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#titel-begrippen> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Sidebar_Filtered" ;
+  rdfs:label "SideBarBlockBegrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#SideBarBlockDPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerblock#SideBar> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#KT-DPO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#Nav-DPO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#Titel-DPO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Sidebar_Uncategorized" ;
+  rdfs:label "SideBarBlockDPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#SideBarBlockVO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerblock#SideBar> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#Kleine-VO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#Nav-VO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftpart> <http://taxonic.kennisnet.com/ontologies/viewerasset#Titel-VO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Sidebar" ;
+  rdfs:label "SideBarBlockVO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Template-Begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template_2> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Body> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek4-Begrippen> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek5-Begrippen> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftFooter> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Footer> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek6-vo-footer> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Header> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek1> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageplek3> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomepagePlek2> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Template_2" ;
+  rdfs:label "Template-Begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Template-DPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template_2> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Body> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek5-DPO> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#plek4-DPO> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftFooter> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Footer> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek6-vo-footer> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Header> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek1> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageplek3> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomepagePlek2> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Template_2" ;
+  rdfs:label "Template-DPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Template-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template_2> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Body> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek4-PO> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek5-PO> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftFooter> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Footer> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek6-vo-footer> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Header> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek1> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageplek3> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomepagePlek2> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Template_2" ;
+  rdfs:label "Template-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Template-VO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template_2> ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Body> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek4-VO> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek5-VO> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftFooter> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Footer> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek6-vo-footer> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Header> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePagePlek1> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomePageplek3> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomepagePlek2> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Template_2" ;
+  rdfs:label "Template-VO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Template2>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Template_2> ;
+  rdfs:label "Template2" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Titel-DPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarTitel> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/6c15ecc7-bcca-4616-8644-7cee24709b53> ;
+  rdfs:label "Titel-DPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Titel-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarTitel> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/6c15ecc7-bcca-4616-8644-7cee24709b53> ;
+  rdfs:label "Titel-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Titel-VO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarTitel> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/6c15ecc7-bcca-4616-8644-7cee24709b53> ;
+  rdfs:label "Titel-VO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Titeltekst>
+  rdf:type owl:Class ;
+  rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+  rdfs:label "Titeltekst" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/viewerdata/Labeltekst> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#TiteltekstHeader>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerasset#Titeltekst> ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "Vensters Encyclopedie" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#VO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewer#AnderePagina> ;
+  rdfs:label "VO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#VO-Pagina>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewer#AnderePagina> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Pagina" ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftTemplate> <http://taxonic.kennisnet.com/ontologies/viewerasset#Template-VO> ;
+  rdfs:label "Vensters VO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#Vensters_Encyclopedie>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewer#Viewer> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftHoofdPagina> <http://taxonic.kennisnet.com/ontologies/viewerasset#hoofdpagina-VE> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftPagina> <http://taxonic.kennisnet.com/ontologies/viewerasset#Begrippen> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftPagina> <http://taxonic.kennisnet.com/ontologies/viewerasset#DPO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftPagina> <http://taxonic.kennisnet.com/ontologies/viewerasset#PO> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftPagina> <http://taxonic.kennisnet.com/ontologies/viewerasset#VO> ;
+  rdfs:label "Vensters Encyclopedie" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#ViewerInstance>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewer#Viewer> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftHoofdPagina> <http://taxonic.kennisnet.com/ontologies/viewerasset#Hoofdpagina> ;
+  rdfs:label "ViewerInstance" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#beschrijving-vo>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingBody> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#hasRootIndexableProperty> <http://taxonic.kennisnet.com/ontologies/viewerasset#p1> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/d74804c8-020d-4144-9c1b-7ec48b30c0e5> ;
+  rdfs:label "beschrijving-vo" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#beschrijving-vo-titel>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingTitel> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/d74804c8-020d-4144-9c1b-7ec48b30c0e5> ;
+  rdfs:label "beschrijving-vo-titel" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#click-begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#Begrippen-Pagina> ;
+  rdfs:label "click-begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#click-contact>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#ExterneContactPagina> ;
+  rdfs:label "click-contact" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#click-disclaimer>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#ExterneDisclaimerPagina> ;
+  rdfs:label "click-disclaimer" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#click-dpo>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#DPO> ;
+  rdfs:label "click-dpo" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#click-home>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#hoofdpagina-VE> ;
+  rdfs:label "click-home" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#click-logohead>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#hoofdpagina-VE> ;
+  rdfs:label "click-logohead" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#click-po>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#PO> ;
+  rdfs:label "click-po" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#click-sidebar-PO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#BeschijvingBody-PO> ;
+  rdfs:label "click-sidebar-PO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#click-titlehead>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#hoofdpagina-VE> ;
+  rdfs:label "click-titlehead" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#click-vo>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#VO-Pagina> ;
+  rdfs:label "click-vo" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#ddm0>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  rdfs:label "ddm0" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#ddm1>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/first> "true"^^xsd:boolean ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasNext> <http://taxonic.kennisnet.com/ontologies/viewerasset#ddm2> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasParent> <http://taxonic.kennisnet.com/ontologies/viewerasset#ddm0> ;
+  rdfs:label "ddm1" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#ddm2>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasNext> <http://taxonic.kennisnet.com/ontologies/viewerasset#ddm3> ;
+  rdfs:label "ddm2" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#ddm3>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  rdfs:label "ddm3" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#fi0>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  rdfs:label "fi0" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#fi1>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/first> "true"^^xsd:boolean ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasNext> <http://taxonic.kennisnet.com/ontologies/viewerasset#fi2> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasParent> <http://taxonic.kennisnet.com/ontologies/viewerasset#fi0> ;
+  rdfs:label "fi1" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#fi2>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasNext> <http://taxonic.kennisnet.com/ontologies/viewerasset#fi3> ;
+  rdfs:label "fi2" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#fi3>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  rdfs:label "fi3" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#hasRootIndexableProperty>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#BeschrijvingBody> ;
+  rdfs:label "hasRootIndexableProperty" ;
+  rdfs:range <http://purl.edustandaard.nl/model/ordered_lists/Index> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#heeftData>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerasset#Part> ;
+  rdfs:label "heeftData" ;
+  rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#heeftProperty>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+  rdfs:label "heeftProperty" ;
+  rdfs:range rdf:Property ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#heeftType>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+  rdfs:label "heeftType" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#heeftUrl>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#ExternePagina> ;
+  rdfs:label "heeftUrl" ;
+  rdfs:range xsd:string ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerpart#Part> ;
+  rdfs:label "heeftdata" ;
+  rdfs:range <http://taxonic.kennisnet.com/ontologies/viewerasset#Data> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#hoofdpagina-VE>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewer#HoofdPagina> ;
+  <http://taxonic.kennisnet.com/ontologies/viewer#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Pagina" ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftTemplate> <http://taxonic.kennisnet.com/ontologies/viewerasset#HomeTemplate> ;
+  rdfs:label "hoofdpagina-VE" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#hover-indicatoren>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Hover> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#DropdownMenuInstance> ;
+  rdfs:label "hover-indicatoren" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#indexForIndexableProperty>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://purl.edustandaard.nl/model/ordered_lists/Index> ;
+  rdfs:label "indexForIndexableProperty" ;
+  rdfs:range rdf:Property ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#indexableProperties>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://taxonic.kennisnet.com/ontologies/viewerasset#IndexableProperty> ;
+  rdfs:label "indexableProperties" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#kt-begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarKleineTitel> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQuery> <http://taxonic.kennisnet.com/ontologies/viewerasset#query-kt-begrippen> ;
+  rdfs:label "kt-begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#logobehavior>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#click> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftResult> <http://taxonic.kennisnet.com/ontologies/viewerasset#hoofdpagina-VE> ;
+  rdfs:label "logobehavior" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#m0>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  rdfs:label "m0" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#m1>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/first> "true"^^xsd:boolean ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasNext> <http://taxonic.kennisnet.com/ontologies/viewerasset#m2> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasParent> <http://taxonic.kennisnet.com/ontologies/viewerasset#m0> ;
+  rdfs:label "m1" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#m2>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasNext> <http://taxonic.kennisnet.com/ontologies/viewerasset#m3> ;
+  rdfs:label "m2" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#m3>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  rdfs:label "m3" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#nav-begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#NavigationList> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftType> <http://purl.edustandaard.nl/metamodel/indicatoren/Begrip> ;
+  rdfs:label "nav-begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#nvpo>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#NavigationList> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftProperty> <http://purl.edustandaard.nl/metamodel/indicatoren/indicatorcategorie> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQuery> <http://taxonic.kennisnet.com/ontologies/viewerasset#nvpoq> ;
+  rdfs:label "nvpo" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#nvpoq>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Query> ;
+  rdfs:label "nvpoq" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#p1>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/first> "true"^^xsd:boolean ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasNext> <http://taxonic.kennisnet.com/ontologies/viewerasset#p2> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#indexForIndexableProperty> <http://www.w3.org/2004/02/skos/core#definition> ;
+  rdfs:label "p1" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#p2>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasNext> <http://taxonic.kennisnet.com/ontologies/viewerasset#p3> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#indexForIndexableProperty> <http://purl.edustandaard.nl/metamodel/indicatoren/basisinformatie> ;
+  rdfs:label "p2" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#p3>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasNext> <http://taxonic.kennisnet.com/ontologies/viewerasset#p4> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#indexForIndexableProperty> <http://purl.edustandaard.nl/metamodel/indicatoren/vergelijkingsgroep> ;
+  rdfs:label "p3" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#p4>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasNext> <http://taxonic.kennisnet.com/ontologies/viewerasset#p5> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#indexForIndexableProperty> <http://purl.edustandaard.nl/metamodel/indicatoren/databron> ;
+  rdfs:label "p4" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#p5>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://purl.edustandaard.nl/model/ordered_lists/hasNext> <http://taxonic.kennisnet.com/ontologies/viewerasset#p6> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#indexForIndexableProperty> <http://purl.edustandaard.nl/metamodel/indicatoren/berekeningswijze> ;
+  rdfs:label "p5" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#p6>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#indexForIndexableProperty> <http://purl.edustandaard.nl/metamodel/indicatoren/validiteitBetrouwbaarheid> ;
+  rdfs:label "p6" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#p7>
+  rdf:type <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  rdfs:label "p7" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#plek4-DPO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Plek4> ;
+  <http://taxonic.kennisnet.com/ontologies/vviewerblock#heeftBlock> <http://taxonic.kennisnet.com/ontologies/viewerasset#SideBarBlockDPO> ;
+  rdfs:label "plek4-DPO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#query-PO-kt>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Query> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQueryGraphPattern> "SELECT DISTINCT ?queryResult WHERE { ?indicator a <http://purl.edustandaard.nl/metamodel/indicatoren/Indicator> . ?indicator skos:scopeNote <http://purl.edustandaard.nl/metamodel/indicatoren/po> . ?indicator <http://purl.edustandaard.nl/metamodel/indicatoren/indicatorcategorie> ?indicatorcategorie . BIND(?indicatorcategorie as ?queryResult) }" ;
+  rdfs:label "query-PO-kt" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#query-VO>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Query> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQueryGraphPattern> "SELECT DISTINCT ?queryResult WHERE { ?indicator a <http://purl.edustandaard.nl/metamodel/indicatoren/Indicator> . ?indicator skos:scopeNote <http://purl.edustandaard.nl/metamodel/indicatoren/vo> . ?indicator <http://purl.edustandaard.nl/metamodel/indicatoren/indicatorcategorie> ?indicatorcategorie . BIND(?indicatorcategorie as ?queryResult) }" ;
+  rdfs:label "query-VO" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#query-dpo>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Query> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQueryGraphPattern> " SELECT DISTINCT ?queryResultNavigationList WHERE{ <http://purl.edustandaard.nl/indicatoren/DPO/Dashboard_passend_onderwijs> skos:hasTopConcept ?queryResultNavigationList . } ORDER BY (?queryResultNavigationList)" ;
+  rdfs:label "query-dpo" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#query-kt-begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#Query> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQueryGraphPattern> "SELECT DISTINCT ?queryResultFiltered WHERE {         ?begrip a ?type .          VALUES ?type { <http://purl.edustandaard.nl/metamodel/indicatoren/Begrip> <http://purl.edustandaard.nl/metamodel/indicatoren/Dimensie> <http://purl.edustandaard.nl/metamodel/indicatoren/Gegeven> }.         ?begrip <http://www.w3.org/2004/02/skos/core#prefLabel> ?label.         bind( UCASE( substr(?label, 1, 1)) as ?queryResultFiltered ). } ORDER BY (?queryResultFiltered)" ;
+  rdfs:label "query-kt-begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#teks-beschrijvingbody-hp>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerasset#tekst> ;
+  rdfs:label "teks-beschrijvingbody-hp" ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "tekst-beschijvingbody-hp" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#tekst>
+  rdf:type owl:Class ;
+  rdfs:label "tekst" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/viewerdata/Viewertekst> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerasset#titel-begrippen>
+  rdf:type <http://taxonic.kennisnet.com/ontologies/viewerpart#SideBarTitel> ;
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/conceptscheme/Begrippen> ;
+  rdfs:label "titel-begrippen" ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#Foot>
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/ordered_lists/IndexableItem> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#HeeftRootIndex>
+  rdfs:range <http://purl.edustandaard.nl/model/ordered_lists/Index> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#ITELHEAD>
+  <http://taxonic.kennisnet.com/ontologies/viewerasset#heeftdata> <http://purl.edustandaard.nl/dataviewset/44aaa200-cedb-4075-a511-dc0f3b094175> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#MneuItem>
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/ordered_lists/IndexableItem> ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewerpart#heeftQueryGraphPattern>
+  rdfs:range xsd:string ;
+.
+<http://taxonic.kennisnet.com/ontologies/viewertemplate#homet1>
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftBody> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Body> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek4-Hoofdpagina> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftFooter> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Footer> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek5-Hoofdpagina-Footer> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftHeader> [
+      rdf:type <http://taxonic.kennisnet.com/ontologies/viewertemplate#Header> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek1-Instance> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek2Instance> ;
+      <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftPlek> <http://taxonic.kennisnet.com/ontologies/viewerasset#Plek3Instance> ;
+    ] ;
+  <http://taxonic.kennisnet.com/ontologies/viewertemplate#heeftSWPComponent> "http://topbraid.org/swa/knviewer#Template_1" ;
+.
+<http://www.w3.org/2004/02/skos/core#Concept>
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerasset#Data> ;
+.
+<http://www.w3.org/2004/02/skos/core#ConceptScheme>
+  rdfs:subClassOf <http://taxonic.kennisnet.com/ontologies/viewerasset#Data> ;
+.
+<urn:x-evn-master:asset_ontology_>
+  rdf:type owl:Ontology ;
+  metadata:status metadata:UnderDevelopmentStatus ;
+  <http://topbraid.org/swa#defaultNamespace> "http://taxonic.kennisnet.com/ontologies/viewerasset#" ;
+  rdfs:comment "The Vensters Encyclopedie Viewer: back end." ;
+  rdfs:label "ViewerAsset Ontology" ;
+  rdfs:label "asset ontology " ;
+  rdfs:label "asset" ;
+  rdfs:label "asset_1" ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://spinrdf.org/spl> ;
+  owl:imports <urn:x-evn-master:partonto> ;
+  owl:imports <urn:x-evn-master:viewset_vensters_encyclopedie> ;
+.

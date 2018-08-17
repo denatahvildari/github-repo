@@ -1,0 +1,89 @@
+# baseURI: urn:x-evn-master:ordered_lists
+# imports: http://datashapes.org/dash
+# imports: http://spinrdf.org/spl
+
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.edustandaard.nl/model/meta/AbstractItem>
+  rdf:type owl:Class ;
+  rdfs:label "AbstractItem" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://purl.edustandaard.nl/model/ordered_lists/Index>
+  rdf:type owl:Class ;
+  rdfs:label "Index" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality 1 ;
+      owl:onProperty <http://purl.edustandaard.nl/model/ordered_lists/hasParent> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality 1 ;
+      owl:onProperty <http://purl.edustandaard.nl/model/ordered_lists/indexFor> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality 1 ;
+      owl:onProperty <http://purl.edustandaard.nl/model/ordered_lists/indexIn> ;
+    ] ;
+.
+<http://purl.edustandaard.nl/model/ordered_lists/IndexableItem>
+  rdf:type owl:Class ;
+  rdfs:label "IndexableItem" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/meta/AbstractItem> ;
+.
+<http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex>
+  rdf:type owl:Class ;
+  rdfs:label "Ordered index" ;
+  rdfs:subClassOf <http://purl.edustandaard.nl/model/ordered_lists/Index> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality 1 ;
+      owl:onProperty <http://purl.edustandaard.nl/model/ordered_lists/first> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality 1 ;
+      owl:onProperty <http://purl.edustandaard.nl/model/ordered_lists/hasNext> ;
+    ] ;
+.
+<http://purl.edustandaard.nl/model/ordered_lists/first>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  rdfs:label "eerste" ;
+  rdfs:range xsd:boolean ;
+.
+<http://purl.edustandaard.nl/model/ordered_lists/hasNext>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://purl.edustandaard.nl/model/ordered_lists/OrderedIndex> ;
+  rdfs:label "opvolgende" ;
+  rdfs:range <http://purl.edustandaard.nl/model/ordered_lists/Index> ;
+.
+<http://purl.edustandaard.nl/model/ordered_lists/hasParent>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://purl.edustandaard.nl/model/ordered_lists/Index> ;
+  rdfs:label "heeft ouder" ;
+  rdfs:range <http://purl.edustandaard.nl/model/ordered_lists/Index> ;
+.
+<http://purl.edustandaard.nl/model/ordered_lists/indexFor>
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De relatie met het betreffende concept." ;
+  rdfs:domain <http://purl.edustandaard.nl/model/ordered_lists/Index> ;
+  rdfs:label "index voor" ;
+  rdfs:range <http://purl.edustandaard.nl/model/ordered_lists/IndexableItem> ;
+.
+<urn:x-evn-master:ordered_lists>
+  rdf:type owl:Ontology ;
+  metadata:status metadata:UnderDevelopmentStatus ;
+  <http://topbraid.org/swa#defaultNamespace> "http://purl.edustandaard.nl/model/index/" ;
+  rdfs:comment "De ontologie om hiërarchieën, ongeordende en geordende lijsten te maken." ;
+  rdfs:label "Index ontology" ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://spinrdf.org/spl> ;
+.
